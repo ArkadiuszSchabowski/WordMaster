@@ -1,0 +1,59 @@
+﻿#messageContainer, #topPanelContainer, #wordsListContainer, #bottomPanelContainer {
+    width: 100vw;
+    justify-content: center;
+    border: 1px solid black;
+    color: #404040;
+    background-color: #FFFFFF;
+}
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.input {
+    width: 50vw;
+    height: 30px;
+    font-size: 24px;
+    background-color: #F5F5F5;
+}
+.btnBlocked {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+    .button:hover {
+        background-color: #FF2929;
+    }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    #messageContainer, #topPanelContainer, #wordsListContainer, #bottomPanelContainer {
+        width: 90vw;
+    }
+    #topPanelContainer, #wordsListContainer, #bottomPanelContainer {
+        margin-top: 1%;
+    }
+    .label {
+        width: 30vw;
+    }
+    .input {
+        width: 45vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #messageContainer, #topPanelContainer, #wordsListContainer, #bottomPanelContainer {
+        width: 90vw;
+    }
+    #topPanelContainer, #wordsListContainer, #bottomPanelContainer {
+        margin-top: 1%;
+    }
+    .label {
+        width: 30vw;
+    }
+    .input {
+        width: 45vw;
+    }
+}

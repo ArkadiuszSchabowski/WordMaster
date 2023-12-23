@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordMaster", "WordMaster.csproj", "{52CE3AD3-C120-4CA9-9247-A1C6CF47CFBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordMaster.Database", "..\WordMaster.Database\WordMaster.Database.csproj", "{B66244C9-0C35-44D0-8233-28F23090CCD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52CE3AD3-C120-4CA9-9247-A1C6CF47CFBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CE3AD3-C120-4CA9-9247-A1C6CF47CFBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CE3AD3-C120-4CA9-9247-A1C6CF47CFBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CE3AD3-C120-4CA9-9247-A1C6CF47CFBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66244C9-0C35-44D0-8233-28F23090CCD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66244C9-0C35-44D0-8233-28F23090CCD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66244C9-0C35-44D0-8233-28F23090CCD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66244C9-0C35-44D0-8233-28F23090CCD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEEA18C8-4E43-4E32-91C9-DABBFB0F43E2}
+	EndGlobalSection
+EndGlobal

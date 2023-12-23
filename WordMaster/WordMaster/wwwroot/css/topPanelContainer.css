@@ -1,0 +1,55 @@
+﻿#topPanelContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 38vh;
+}
+#firstTopPanelRow,
+#secondTopPanelRow {
+    display: flex;
+    width: 100%;
+}
+#buttonsTopPanelContainer {
+    display: flex;
+    flex-direction: row;
+}
+.buttonTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 23vw;
+    height: 40px;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#btnAdd{
+    margin-left: 7%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    #topPanelContainer{
+        height: 30vh
+    }
+    #secondTopPanelRow {
+    }
+    .buttonTop{
+        width: 20vw;
+        margin-top: 3vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #topPanelContainer {
+        height: 30vh
+    }
+    #secondTopPanelRow {
+        margin-top: 1.5%;
+    }
+    .buttonTop {
+        width: 20vw;
+        margin-top: 3vh;
+    }
+}

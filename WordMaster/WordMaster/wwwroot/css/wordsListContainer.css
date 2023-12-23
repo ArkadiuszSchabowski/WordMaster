@@ -1,0 +1,38 @@
+﻿#wordsListContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 21vh;
+    max-height: 190px;
+    overflow: auto;
+}
+#plWordDivTittle, #engWordDivTittle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #F5F5F5;
+}
+#plWordsDiv, #engWordsDiv {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #404040;
+    width: 100%;
+}
+#engWordsDiv {
+    border-left: none;
+}
+.plClass, .engClass {
+    width: 90%;
+    height: 20px;
+    margin-top: 1%;
+    margin-left: 5%;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+}
+
+@media screen and (min-width: 1200px) {
+}

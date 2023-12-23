@@ -1,0 +1,21 @@
+﻿#messageContainer {
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    #messageContainer {
+        height: 10vh;
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #messageContainer {
+        height: 12vh;
+        font-size: 26px;
+    }
+}

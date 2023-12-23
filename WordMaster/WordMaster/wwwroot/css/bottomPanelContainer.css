@@ -1,0 +1,92 @@
+﻿#bottomPanelContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 25vh;
+}
+#firstBottomPanelRow,
+#secondBottomPanelRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#buttonsBottomPanelContainer {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+}
+
+#secondBottomPanelRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttonBottom {
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 40px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#btnSearch {
+    margin-left: 3vw;
+}
+#btnDelete {
+    margin-left: 2vw;
+}
+#countWords {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    #bottomPanelContainer{
+        height: 22vh;
+    }
+    #secondBottomPanelRow {
+        justify-content: normal;
+        margin-top: 1%;
+    }
+    #buttonsBottomPanelContainer{
+        width: 30vw;
+    }
+    #countWords {
+        width: 45vw;
+    }
+    .buttonBottom {
+        width: 12vw;
+    }
+    #btnDelete {
+        margin-left: 1vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #bottomPanelContainer {
+        height: 20vh;
+    }
+    #secondBottomPanelRow {
+        justify-content: normal;
+        margin-top: 1%;
+    }
+    #buttonsBottomPanelContainer {
+        width: 30vw;
+    }
+    #countWords {
+        width: 45vw;
+    }
+    .buttonBottom {
+        width: 12vw;
+    }
+    #btnDelete {
+        margin-left: 1vw;
+    }
+}
