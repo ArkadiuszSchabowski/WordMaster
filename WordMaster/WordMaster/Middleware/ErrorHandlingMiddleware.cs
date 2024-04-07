@@ -1,4 +1,6 @@
 ﻿
+using WordMaster.Exceptions;
+
 namespace WordMaster.Middleware
 {
     public class ErrorHandlingMiddleware : IMiddleware
@@ -9,7 +11,12 @@ namespace WordMaster.Middleware
             {
                 await next.Invoke(context);
             }
-            catch (Exception)
+            catch (NotFoundException e)
+            {
+                context.Response.StatusCode = 404;
+                await context.Response.WriteAsync(e.Message);
+            }
+            catch (Exception e)
             {
                 context.Response.StatusCode = 500;
                 await context.Response.WriteAsync("Błąd serwera");

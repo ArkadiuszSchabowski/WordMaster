@@ -1,5 +1,6 @@
 ﻿using WordMaster.Database;
 using WordMaster.Database.Entities;
+using WordMaster.Exceptions;
 
 namespace WordMaster.Services
 {
@@ -21,7 +22,12 @@ namespace WordMaster.Services
         }
         public IEnumerable<Word> GetAllWords()
         {
-            return _context.Words.ToList();
+            var words = _context.Words.ToList();
+            if (!_context.Words.Any())
+            {
+                throw new NotFoundException("Nie masz jeszcze słów w słowniku!");
+            }
+            return words;
         }
         public Word? GetWord(int id)
         {

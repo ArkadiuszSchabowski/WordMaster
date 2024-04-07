@@ -20,11 +20,6 @@ namespace WordMaster.Controllers
         {
             var allWords = _service.GetAllWords();
 
-            if (allWords == null)
-            {
-                return NotFound(new { message = "Nie masz jeszcze słów w słowniku!", data = allWords });
-            }
-
             return Ok(new { status = "ok", message = "Słownik wczytany pomyślnie!", data = allWords });
         }
 
