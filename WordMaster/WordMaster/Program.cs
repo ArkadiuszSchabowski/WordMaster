@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WordMaster.Database;
 using WordMaster.Middleware;
+using WordMaster.Seeders;
 using WordMaster.Services;
 
 namespace WordMaster
@@ -12,17 +13,17 @@ namespace WordMaster
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllersWithViews();
+
             if (builder.Environment.IsDevelopment())
             {
                 builder.Services.AddDbContext<MyDbContext>(options => options.UseInMemoryDatabase("MemoryDatabase"));
             }
-            else
-            {
-                builder.Services.AddDbContext<MyDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("WordMasterConnectionString")));
-            }
+
+            builder.Services.AddDbContext<MyDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("WordMasterConnectionString")));
 
             builder.Services.AddScoped<ErrorHandlingMiddleware>();
             builder.Services.AddScoped<IWordService, WordService>();
+            builder.Services.AddScoped<IWordSeeder, WordSeeder>();
 
             var app = builder.Build();
 
@@ -33,6 +34,14 @@ namespace WordMaster
             }
 
             app.UseMiddleware<ErrorHandlingMiddleware>();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var seeder = services.GetRequiredService<IWordSeeder>();
+                seeder.AddWords();
+            }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

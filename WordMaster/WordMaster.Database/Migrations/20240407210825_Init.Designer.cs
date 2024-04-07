@@ -11,15 +11,15 @@ using WordMaster.Database;
 namespace WordMaster.Database.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20231215145402_DataSeed")]
-    partial class DataSeed
+    [Migration("20240407210825_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -43,26 +43,6 @@ namespace WordMaster.Database.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Words");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            EnglishWord = "BOOK",
-                            PolishWord = "KSIĄŻKA"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            EnglishWord = "GUINEA PIG",
-                            PolishWord = "ŚWINKA MORSKA"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            EnglishWord = "DEVELOPER",
-                            PolishWord = "PROGRAMISTA"
-                        });
                 });
 #pragma warning restore 612, 618
         }

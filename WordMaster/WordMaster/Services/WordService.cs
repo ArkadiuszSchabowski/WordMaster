@@ -23,10 +23,6 @@ namespace WordMaster.Services
         public IEnumerable<Word> GetAllWords()
         {
             var words = _context.Words.ToList();
-            if (!_context.Words.Any())
-            {
-                throw new NotFoundException("Nie masz jeszcze słów w słowniku!");
-            }
             return words;
         }
         public Word? GetWord(int id)

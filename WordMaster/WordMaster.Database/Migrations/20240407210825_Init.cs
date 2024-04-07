@@ -2,12 +2,10 @@
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace WordMaster.Database.Migrations
 {
     /// <inheritdoc />
-    public partial class DataSeed : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,16 +22,6 @@ namespace WordMaster.Database.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Words", x => x.Id);
-                });
-
-            migrationBuilder.InsertData(
-                table: "Words",
-                columns: new[] { "Id", "EnglishWord", "PolishWord" },
-                values: new object[,]
-                {
-                    { 1, "BOOK", "KSIĄŻKA" },
-                    { 2, "GUINEA PIG", "ŚWINKA MORSKA" },
-                    { 3, "DEVELOPER", "PROGRAMISTA" }
                 });
         }
 
