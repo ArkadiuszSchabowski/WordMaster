@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WordMaster.Database;
+using WordMaster.Middleware;
 using WordMaster.Services;
 
 namespace WordMaster
@@ -20,6 +21,7 @@ namespace WordMaster
                 builder.Services.AddDbContext<MyDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("WordMasterConnectionString")));
             }
 
+            builder.Services.AddScoped<ErrorHandlingMiddleware>();
             builder.Services.AddScoped<IWordService, WordService>();
 
             var app = builder.Build();
@@ -30,6 +32,7 @@ namespace WordMaster
                 app.UseHsts();
             }
 
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
